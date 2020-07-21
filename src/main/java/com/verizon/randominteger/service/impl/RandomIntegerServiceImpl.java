@@ -1,4 +1,4 @@
-package com.verizon.randominteger;
+package com.verizon.randominteger.service.impl;
 
 import org.springframework.stereotype.Service;
 
