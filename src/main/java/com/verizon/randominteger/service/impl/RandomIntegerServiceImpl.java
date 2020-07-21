@@ -1,5 +1,6 @@
 package com.verizon.randominteger.service.impl;
 
+import com.verizon.randominteger.service.RandomIntegerService;
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedHashSet;
@@ -12,7 +13,7 @@ import java.util.Set;
  * @since 07/21/2020.
  */
 @Service
-public class RandomIntegerServiceImpl {
+public class RandomIntegerServiceImpl implements RandomIntegerService {
 
     /**
      * Print the list of integers from 1 to n in random order
