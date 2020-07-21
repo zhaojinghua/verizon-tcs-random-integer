@@ -1,6 +1,7 @@
 package com.verizon.randominteger;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
@@ -12,14 +13,17 @@ import java.util.Set;
 public class RandomInteger {
 
     /**
-     * print the list of integers from 1 to n in random order
+     * Print the list of integers from 1 to n in random order
      *
      * @param n the maximum possible integer
      */
-    public void generateRandomNumbers (int n) {
+    public void generateRandomNumbers (Integer n) throws IllegalArgumentException {
+        if (n < 1) {
+            throw new IllegalArgumentException("Input should be greater than or equal to one.");
+        }
 
-        //Use set to achieve uniqueness
-        Set<Integer> numbers = new HashSet<>();
+        //Use LinkedHashSet to achieve uniqueness and preserve added order
+        Set<Integer> numbers = new LinkedHashSet<>();
 
         //Check size to make sure we have no gap in the range of 1 to n
         while (numbers.size() != n) {
